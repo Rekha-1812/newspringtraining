@@ -1,0 +1,24 @@
+package bootsample.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import bootsample.dao.TaskRepository;
+import bootsample.model.Task;
+
+public class TaskService {
+
+	private final TaskRepository taskRepository;
+
+	public TaskService(TaskRepository taskRepository) {
+		super();
+		this.taskRepository = taskRepository;
+	}
+public List<Task> findAll(){
+	List<Task> tasks=new ArrayList<>();
+	for(Task t:taskRepository.findAll()) {
+		tasks.add(t);
+	}
+	return tasks;
+}
+}

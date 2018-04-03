@@ -1,0 +1,6 @@
+package bootsample.model;
+
+@Entity()
+public class Task {
+
+}

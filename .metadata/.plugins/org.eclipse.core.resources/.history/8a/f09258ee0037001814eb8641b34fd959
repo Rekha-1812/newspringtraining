@@ -1,0 +1,5 @@
+package bootsample.dao;
+
+public interface TaskRepository {
+
+}

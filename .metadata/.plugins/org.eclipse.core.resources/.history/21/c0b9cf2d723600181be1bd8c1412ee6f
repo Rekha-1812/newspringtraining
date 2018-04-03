@@ -1,0 +1,22 @@
+package com.addition;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestAddition {
+
+	/*@Test
+	public void test() {
+		fail("Not yet implemented");
+	}*/
+@Test
+public void testaddNumber() {
+	System.out.println("Numbers addition unit test");
+	MathsAddition m=new MathsAddition();
+	int n1=10,n2=18;
+	int actualresult=m.addNumber(n1, n2);
+	int expectedresult=28;
+assertEquals(expectedresult,actualresult);
+}
+}

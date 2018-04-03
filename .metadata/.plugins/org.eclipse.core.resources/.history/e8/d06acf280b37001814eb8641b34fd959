@@ -1,0 +1,21 @@
+package bootsample;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import bootsample.service.TaskService;
+
+@RestController
+public class SampleController {
+	@Autowired
+	private TaskService taskService;
+@GetMapping("/")
+public String hello() {
+	return "hello world";
+}
+@GetMapping("/alltasks")
+public String allTasks() {
+return taskService.findAll().toString();	
+}
+}
